@@ -6,7 +6,7 @@ Summary(pt_BR):	Vários jogos de quebra-cabeça para Linux SVGAlib
 Summary(tr):	SVGAlib ile çalýþan çeþitli zeka oyunlarý
 Name:		vga_gamespack
 Version:	1.4
-Release:	9
+Release:	10
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/strategy/%{name}-%{version}.tgz
