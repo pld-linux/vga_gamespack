@@ -16,7 +16,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	svgalib-devel
 %endif
 %ifarch         ppc
-BuildRequires:  svgalib4ggi-devel
+BuildRequires:	svgalib4ggi-devel
 %endif
 ExclusiveArch:	%{ix86} alpha ppc
 
