@@ -6,14 +6,19 @@ Summary(pt_BR):	Vários jogos de quebra-cabeça para Linux SVGAlib
 Summary(tr):	SVGAlib ile çalýþan çeþitli zeka oyunlarý
 Name:		vga_gamespack
 Version:	1.4
-Release:	8
+Release:	9
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/strategy/%{name}-%{version}.tgz
 Patch0:		%{name}-misc.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+%ifarch		%{ix86}
 BuildRequires:	svgalib-devel
-ExclusiveArch:	%{ix86}
+%endif
+%ifarch         ppc
+BuildRequires:  svgalib4ggi-devel
+%endif
+ExclusiveArch:	%{ix86} ppc
 
 %description
 The vga_gamespack package contains three games for the Linux VGA
@@ -56,14 +61,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README
 %attr(755,root,root) %{_bindir}/vga_connectN
 %attr(755,root,root) %{_bindir}/vga_mines
 %attr(755,root,root) %{_bindir}/vga_othello
