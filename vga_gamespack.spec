@@ -6,7 +6,7 @@ Summary(pt_BR):	Vários jogos de quebra-cabeça para Linux SVGAlib
 Summary(tr):	SVGAlib ile çalýþan çeþitli zeka oyunlarý
 Name:		vga_gamespack
 Version:	1.4
-Release:	12
+Release:	13
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/strategy/%{name}-%{version}.tgz
@@ -51,13 +51,15 @@ gibi sevilen oyunlarý içerir.
 %build
 %{__make} \
 	CC="%{__cc}" \
-	OPT_FLAGS="%{rpmcflags}"
+	OPT_FLAGS="%{rpmcflags}" \
+	LIBDIR=%{_libdir}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	LIBDIR=%{_libdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
