@@ -1,0 +1,44 @@
+--- vga_gamespack/Makefile.tim	Fri Nov 13 20:09:27 1998
++++ vga_gamespack/Makefile	Wed Jul  5 16:41:00 2000
+@@ -8,8 +8,8 @@
+ # ------------------------------------------------------------------- #
+ 
+ # Installation directories
+-BINDIR=		/usr/games
+-LIBDIR=		/usr/games/lib
++BINDIR=		/usr/bin
++LIBDIR=		/usr/lib/games
+ 
+ # Binary name prefix (to avoid clashes with other programs)
+ PREFIX=		vga_
+@@ -22,7 +22,7 @@
+ 
+ # These may be changed, if desired
+ CC=		gcc
+-CCOPTS=		-O2 -m486
++CCOPTS=		$(OPT_FLAGS)
+ 
+ # ------------------------------------------------------------------- #
+ 
+@@ -40,12 +40,16 @@
+ 
+ all:	$(CONNECT) $(OTHELLO) $(MINES)
+ 
+-install: $(CONNECT) $(OTHELLO) $(MINES) Vga16font8x16
+-	install -o root -m 4711 -s $(CONNECT) $(BINDIR)
+-	install -o root -m 4711 -s $(OTHELLO) $(BINDIR)
+-	install -o root -m 4711 -s $(MINES) $(BINDIR)
+-	install -m 444 Vga16font8x16 $(LIBDIR)
++install: $(DESTDIR)$(BINDIR) $(DESTDIR)$(LIBDIR) \
++	$(CONNECT) $(OTHELLO) $(MINES) Vga16font8x16
++	install -m 0755 $(CONNECT) $(DESTDIR)$(BINDIR)
++	install -m 0755 $(OTHELLO) $(DESTDIR)$(BINDIR)
++	install -m 0755 $(MINES) $(DESTDIR)$(BINDIR)
++	install -d -m 755 $(DESTDIR)$(LIBDIR)
++	install -m 644 Vga16font8x16 $(DESTDIR)$(LIBDIR)
+ 
++$(DESTDIR)$(BINDIR) $(DESTDIR)$(LIBDIR):
++	install -d $@
+ 
+ $(CONNECT):	$(CONNECTOBJ)
+ 	$(CC) -o $(CONNECT) $(CONNECTOBJ) -lvga
