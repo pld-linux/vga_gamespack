@@ -12,13 +12,13 @@ Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/strategy/%{name}-%{version}.tgz
 Patch0:		%{name}-misc.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-%ifarch		%{ix86}
+%ifarch		%{ix86} alpha
 BuildRequires:	svgalib-devel
 %endif
 %ifarch         ppc
 BuildRequires:  svgalib4ggi-devel
 %endif
-ExclusiveArch:	%{ix86} ppc
+ExclusiveArch:	%{ix86} alpha ppc
 
 %description
 The vga_gamespack package contains three games for the Linux VGA
