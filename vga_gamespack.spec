@@ -52,14 +52,14 @@ gibi sevilen oyunlarý içerir.
 %{__make} \
 	CC="%{__cc}" \
 	OPT_FLAGS="%{rpmcflags}" \
-	LIBDIR=%{_libdir}
+	LIBDIR=%{_libdir}/games
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	LIBDIR=%{_libdir}
+	LIBDIR=%{_libdir}/games
 
 %clean
 rm -rf $RPM_BUILD_ROOT
