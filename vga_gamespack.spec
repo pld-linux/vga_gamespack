@@ -12,13 +12,7 @@ Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/strategy/%{name}-%{version}.tgz
 # Source0-md5:	1e661abad1710b35a7a17b58ef53305c
 Patch0:		%{name}-misc.patch
-%ifarch		%{ix86} alpha
 BuildRequires:	svgalib-devel
-%endif
-%ifarch         ppc
-BuildRequires:	svgalib4ggi-devel
-%endif
-ExclusiveArch:	%{ix86} alpha ppc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
