@@ -10,6 +10,7 @@ Release:	10
 License:	distributable
 Group:		Applications/Games
 Source0:	ftp://sunsite.unc.edu/pub/Linux/games/strategy/%{name}-%{version}.tgz
+# Source0-md5:	1e661abad1710b35a7a17b58ef53305c
 Patch0:		%{name}-misc.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %ifarch		%{ix86} alpha
