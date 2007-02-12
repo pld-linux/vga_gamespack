@@ -1,9 +1,9 @@
 Summary:	Mines, Connect 4 and Othello games for the Linux VGA console
-Summary(de):	Verschiedene Denkspiele für Linux SVGAlib
-Summary(es):	Varios juegos de rompecabezas para Linux SVGAlib
-Summary(pl):	Gry Mines, Connect 4 i Othello dla linuksowej konsoli VGA
-Summary(pt_BR):	Vários jogos de quebra-cabeça para Linux SVGAlib
-Summary(tr):	SVGAlib ile çalýþan çeþitli zeka oyunlarý
+Summary(de.UTF-8):   Verschiedene Denkspiele fÃ¼r Linux SVGAlib
+Summary(es.UTF-8):   Varios juegos de rompecabezas para Linux SVGAlib
+Summary(pl.UTF-8):   Gry Mines, Connect 4 i Othello dla linuksowej konsoli VGA
+Summary(pt_BR.UTF-8):   VÃ¡rios jogos de quebra-cabeÃ§a para Linux SVGAlib
+Summary(tr.UTF-8):   SVGAlib ile Ã§alÄ±ÅŸan Ã§eÅŸitli zeka oyunlarÄ±
 Name:		vga_gamespack
 Version:	1.4
 Release:	13
@@ -19,30 +19,30 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The vga_gamespack package contains three games for the Linux VGA
 console: Mines, Connect 4, and Othello.
 
-%description -l de
-Eine Auswahl verschiedener Denkspiele für die Linux-Konsole unter
+%description -l de.UTF-8
+Eine Auswahl verschiedener Denkspiele fÃ¼r die Linux-Konsole unter
 Verwendung der SVGAlib, unter anderem solche Favoriten wie Othello,
 Minesweeper und Connect 4.
 
-%description -l es
-Varios juegos "mentales" para Linux usando SVGAlib. La selección
+%description -l es.UTF-8
+Varios juegos "mentales" para Linux usando SVGAlib. La selecciÃ³n
 incluye algunos best-sellers como Othello, Minesweeper, y Connect 4.
 
-%description -l fr
-Jeux de réflexion pour la console Linux, utilisant SVGAlib. Inclus
-Othello Démineur et Connect 4.
+%description -l fr.UTF-8
+Jeux de rÃ©flexion pour la console Linux, utilisant SVGAlib. Inclus
+Othello DÃ©mineur et Connect 4.
 
-%description -l pl
+%description -l pl.UTF-8
 Pakiet zawiera trzy gry dla linuksowej konsoli VGA: Mines, Connect 4 i
 Othello.
 
-%description -l pt_BR
-Vários jogos "mentais" para o Linux usando SVGAlib. A seleção inclui
+%description -l pt_BR.UTF-8
+VÃ¡rios jogos "mentais" para o Linux usando SVGAlib. A seleÃ§Ã£o inclui
 alguns best-sellers como Othello, Minesweeper, e Connect 4.
 
-%description -l tr
-SVGAlib kullanan konsol oyunlarý. Othello, mayýn tarlasý ve hedef 4
-gibi sevilen oyunlarý içerir.
+%description -l tr.UTF-8
+SVGAlib kullanan konsol oyunlarÄ±. Othello, mayÄ±n tarlasÄ± ve hedef 4
+gibi sevilen oyunlarÄ± iÃ§erir.
 
 %prep
 %setup -q -n %{name}
