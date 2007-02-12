@@ -1,9 +1,9 @@
 Summary:	Mines, Connect 4 and Othello games for the Linux VGA console
-Summary(de.UTF-8):   Verschiedene Denkspiele für Linux SVGAlib
-Summary(es.UTF-8):   Varios juegos de rompecabezas para Linux SVGAlib
-Summary(pl.UTF-8):   Gry Mines, Connect 4 i Othello dla linuksowej konsoli VGA
-Summary(pt_BR.UTF-8):   Vários jogos de quebra-cabeça para Linux SVGAlib
-Summary(tr.UTF-8):   SVGAlib ile çalışan çeşitli zeka oyunları
+Summary(de.UTF-8):	Verschiedene Denkspiele für Linux SVGAlib
+Summary(es.UTF-8):	Varios juegos de rompecabezas para Linux SVGAlib
+Summary(pl.UTF-8):	Gry Mines, Connect 4 i Othello dla linuksowej konsoli VGA
+Summary(pt_BR.UTF-8):	Vários jogos de quebra-cabeça para Linux SVGAlib
+Summary(tr.UTF-8):	SVGAlib ile çalışan çeşitli zeka oyunları
 Name:		vga_gamespack
 Version:	1.4
 Release:	13
